@@ -57,17 +57,19 @@
       "pages": ["api-reference/authentication"]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Folders API",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/folders/get"
       ]
     }
   ],
   "feedback": {
     "thumbsRating": true
+  },
+  "api": {
+    "playground": {
+      "mode": "hide"
+    }
   },
   "footerSocials": {
     "telegram": "https://t.me/vision_browser",
