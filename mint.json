@@ -11,7 +11,6 @@
     "primary": "#007F5F",
     "light": "#62AA2F",
     "dark": "#BFD200",
-    
     "background": {
       "dark": "#161C24"
     },
@@ -50,12 +49,8 @@
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Getting started",
+      "pages": ["getting-started/introduction", "getting-started/advantages", "getting-started/dict", "getting-started/installing"]
     },
     {
       "group": "API Documentation",
