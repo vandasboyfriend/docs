@@ -6,7 +6,7 @@
     "light": "/logo/light_theme.svg"
   },
   "favicon": "/favicon.png",
-  "backgroundImage": "./images/background.png",
+  "backgroundImage": "/images/background_new_2.png",
   "colors": {
     "primary": "#007F5F",
     "light": "#62AA2F",
