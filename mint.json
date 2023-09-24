@@ -13,7 +13,7 @@
     "dark": "#BFD200",
     
     "background": {
-      "dark": "#000"
+      "dark": "#161C24"
     },
     "anchors": {
       "from": "#BFD200",
@@ -71,6 +71,9 @@
       ]
     }
   ],
+  "feedback": {
+    "thumbsRating": true
+  },
   "footerSocials": {
     "telegram": "https://t.me/vision_browser",
     "instagram": "https://t.me/vision_browser"
