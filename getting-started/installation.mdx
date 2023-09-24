@@ -1,0 +1,69 @@
+---
+title: 'Install Vision'
+icon: "desktop"
+---
+
+## System requirements
+Below you can see the system requirements needed for our application to work. 
+
+<Card>
+<Tabs>
+  <Tab title="Windows">
+    -- Windows 10 or later or Windows Server 2016 or later <br />
+    -- An Intel Pentium 4 processor or later that's SSE3 capable <br />
+  </Tab>
+  <Tab title="Mac">
+    -- macOS Catalina 10.15 or later <br />
+    -- MacBook, iMac, Mac Mini or Mac Pro with Intel or M1/M2 
+  </Tab>
+  <Tab title="Linux">
+    -- 64-bit Ubuntu 18.04+, Debian 10+, openSUSE 15.2+, or Fedora Linux 32+ <br />
+    -- An Intel Pentium 4 processor or later that's SSE3 capable <br />
+  </Tab>
+</Tabs>
+</Card>
+<br />
+
+<Note>These requirements are dictated by Google, as their Chromium product does not work on devices that do not meet these requirements</Note>
+
+## Installing on Windows
+
+To install the Vision app on Windows devices, all you need to do is download and run the installer. Also you can choose a directory you want to install it.
+
+## Installing on macOS
+
+To install Vision on macOS devices, you'll need to download the installer that matches your processor. 
+
+Once the download is complete, run the downloaded **.dmg** file and simply move the Vision icon to the Programs folder as shown in the image below. 
+
+<img width="450" className="tailwind mx-auto" src="/images/macos_installer.png" />
+
+Once the installation is complete, you can run Vision from the Programs folder.
+
+## Installing on Linux
+
+The Vision application for Linux devices is in .AppImage format and runs as an executable file. No installation is required.
+
+After extracting the application file from the downloaded archive, you will be able to run it as a normal application.
+
+### Can't executing file like a programm
+
+In order to run the application file, you need to grant the appropriate permissions using the context menu of your operating system, or using the **Terminal** application
+
+#### How to change application permissions by context menu?
+
+Extract the .AppImage file from the downloaded archive and right-click on it, select Properties in the context menu. In the window that opens, select the Permissions tab and tick the Allow executing file as a program check box.
+
+#### How to change application permissions by terminal application?
+
+Open the Terminal application and navigate to the folder where the extracted .AppImage application file is located (for example, this folder is called Downloads)
+
+```
+cd ~/Downloads
+```
+
+Next, run the chmod command to change the permissions of the file named **vision_2.5.33_amd64.AppImage**
+
+```
+chmod +x vision_2.5.33_amd64.AppImage
+```

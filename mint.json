@@ -50,7 +50,7 @@
   "navigation": [
     {
       "group": "Getting started",
-      "pages": ["getting-started/introduction", "getting-started/advantages", "getting-started/dict", "getting-started/installing"]
+      "pages": ["getting-started/introduction", "getting-started/advantages", "getting-started/installation"]
     },
     {
       "group": "API Documentation",
