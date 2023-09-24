@@ -13,7 +13,7 @@
     "dark": "#BFD200",
     
     "background": {
-      "dark": "#161C24"
+      "dark": "#000"
     },
     "anchors": {
       "from": "#BFD200",
