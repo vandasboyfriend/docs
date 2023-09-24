@@ -1,0 +1,87 @@
+---
+title: "Get folders list"
+api: "GET https://apiv2.empr.cloud/api/v1/folders/"
+description: "This endpoint gets all your folders list"
+---
+
+### Headers
+
+<ParamField body="X-Token" type="string">
+  Here you need to put your X-Token
+</ParamField>
+
+
+### Response
+
+<ResponseField name="id" type="string">
+  folder's id
+</ResponseField>
+
+<ResponseField name="owner" type="string">
+  folder owner's id
+</ResponseField>
+
+<ResponseField name="folder_name" type="string">
+  folder's name
+</ResponseField>
+
+<ResponseField name="folder_icon" type="string">
+  folder icon's name
+</ResponseField>
+
+<ResponseField name="folder_color" type="string">
+  folder icon's color
+</ResponseField>
+
+<ResponseField name="created_at" type="string">
+  folder's created date
+</ResponseField>
+
+<ResponseField name="updated_at" type="string">
+  folder's last updated date
+</ResponseField>
+
+<ResponseField name="deleted_ad" type="string or null">
+  folder's deleted date
+</ResponseField>
+
+<RequestExample >
+
+```js JavaScript
+var myHeaders = new Headers();
+myHeaders.append("X-Token", "YOUR_TOKEN_HERE");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://api.empr.cloud/api/v1/folders", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+    "data": [
+        {
+            "id": "cf4003e0-e630-4bc3-9961-61d81c2f3aa5",
+            "owner": "28a3abfc-6892-4dd0-a4f1-57b449851865",
+            "folder_name": "Google Accounts",
+            "folder_icon": "Google",
+            "folder_color": "#3366FF3D",
+            "created_at": "2023-06-22T17:35:58.373758Z",
+            "updated_at": "2023-06-22T17:35:58.373758Z",
+            "deleted_at": null
+        },
+    ]
+}
+```
+
+</ResponseExample>
