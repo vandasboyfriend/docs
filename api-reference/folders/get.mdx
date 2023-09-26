@@ -62,6 +62,20 @@ fetch("https://api.empr.cloud/api/v1/folders", requestOptions)
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 ```
+```python Python
+import requests
+
+url = "https://api.empr.cloud/api/v1/folders"
+
+payload = {}
+headers = {
+  'X-Token': 'YOUR_TOKEN_HERE'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+```
 
 </RequestExample>
 

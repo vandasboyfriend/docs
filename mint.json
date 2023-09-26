@@ -1,6 +1,7 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Vision Documentation",
+  "versions": ["English", "Русский"],
   "logo": {
     "dark": "/logo/dark_theme.svg",
     "light": "/logo/light_theme.svg"
@@ -9,10 +10,10 @@
   "backgroundImage": "/images/background_new_2.png",
   "colors": {
     "primary": "#007F5F",
-    "light": "#62AA2F",
+    "light": "#c9ff1f",
     "dark": "#BFD200",
     "background": {
-      "dark": "#161C24"
+      "dark": "#0f1117"
     },
     "anchors": {
       "from": "#BFD200",
@@ -39,12 +40,26 @@
     {
       "name": "Community chat",
       "icon": "telegram",
-      "url": "https://t.me/vision_chat_ru"
+      "url": "https://t.me/vision_chat_en",
+      "version": "English"
     },
     {
       "name": "News channel",
       "icon": "newspaper",
-      "url": "https://t.me/vision_browser"
+      "url": "https://t.me/vision_browser",
+      "version": "English"
+    },
+    {
+      "name": "Чат в Telegram",
+      "icon": "telegram",
+      "url": "https://t.me/vision_chat_en",
+      "version": "Русский"
+    },
+    {
+      "name": "Новости в Telegram",
+      "icon": "newspaper",
+      "url": "https://t.me/vision_browser",
+      "version": "Русский"
     }
   ],
   "navigation": [
@@ -57,9 +72,16 @@
       "pages": ["api-reference/authentication"]
     },
     {
-      "group": "Folders API",
+      "group": "Endpoints",
       "pages": [
-        "api-reference/folders/get"
+        {
+          "group": "Folders",
+          "pages": ["api-reference/folders/get", "api-reference/folders/create","api-reference/folders/update", "api-reference/folders/delete"]
+        },
+        {
+          "group": "Profiles",
+          "pages": ["api-reference/profiles/create", "api-reference/profiles/edit","api-reference/profiles/delete"]
+        }
       ]
     }
   ],
