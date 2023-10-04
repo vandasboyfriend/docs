@@ -1,20 +1,21 @@
 ---
 title: "Delete folder"
-api: "DELETE https://api.mintlify.com/api/user"
+api: "DELETE https://apiv2.empr.cloud/api/v1/folders/:folder_id"
 description: "This endpoint deletes an existing user."
 ---
 
-### Body
+### Headers
 
-<ParamField body="data_source_provided_id" type="string">
-  The data source ID provided in the data tab may be used to identify the data
-  source for the user group
+<ParamField body="X-Token" type="string" required>
+  your auth token
 </ParamField>
 
-<ParamField body="current_token" type="string">
-  This is the current user group token you have for the user group you want to
-  delete
+### Query parameters
+
+<ParamField body="Folder's id" required>
+  your folder's id, you want to change something
 </ParamField>
+
 
 ### Response
 
@@ -22,26 +23,18 @@ description: "This endpoint deletes an existing user."
   Indicates whether the call was successful. 1 if successful, 0 if not.
 </ResponseField>
 
-<RequestExample>
-
-```bash Example Request
-curl --location --request DELETE 'https://api.mintlify.com/api/user' \
---header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
---data-raw '{
-		"user_group_id": "example_1"
-		"current_token": "abcdef"
-}'
-```
-
-</RequestExample>
 
 <ResponseExample>
 
 ```json Response
 {
-  "success": 1
-}
+  "data":[],
+  "usage":
+    {
+      "users":0,
+      "profiles":35
+    }
+  }
 ```
 
 </ResponseExample>

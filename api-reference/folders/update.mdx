@@ -1,100 +1,141 @@
 ---
 title: "Edit folder"
-api: "PATCH https://api.mintlify.com/api/user"
+api: "PATCH https://apiv2.empr.cloud/api/v1/folders/:folder_id"
 description: "This endpoint updates an existing user."
 ---
 
+### Headers
+
+<ParamField body="X-Token" type="string" required>
+  your auth token
+</ParamField>
+
+### Query parameters
+<ParamField body="Folder's id" required>
+  your folder's id, you want to change something
+</ParamField>
+
+
 ### Body
 
-<ParamField body="name" type="string">
-  This is the name of the user group.
+<ParamField body="folder_name" type="string">
+  new folder's name, any string
 </ParamField>
-
-<ParamField body="user_group_id" type="string">
-  This is the ID you use to identify this user group in your database.
+<ParamField body="folder_icon" type="string">
+  new folder's icon
+  list of available icons: <br />
+    -- Cloud <br />
+    -- Google <br />
+    -- Facebook <br />
+    -- TikTok <br />
+    -- Amazon <br />
+    -- Bitcoin <br />
+    -- Meta <br />
+    -- PayPal <br />
+    -- Discord <br />
+    -- Twitter <br />
+    -- Vkontakte <br />
+    -- Youtube <br />
+    -- Tinder <br />
+    -- Onlyfans <br />
+    -- Threads <br />
+  
 </ParamField>
-
-<ParamField body="mapping" type="object">
-  This is a JSON mapping of schema id to either the data source that this user
-  group should be associated with or id of the datasource you provided when
-  creating it.
-</ParamField>
-
-<ParamField body="properties" type="object">
-  This is a JSON object for properties assigned to this user group. These will
-  be accessible through variables in the dashboards and SQL editor
+<ParamField body="folder_color" type="string">
+  new folder icon's color <br />
+  list of available colors: <br />
+  -- #FFC1073D <br />
+  -- #C8E4FFCD <br />
+  -- #3366FF3D <br />
+  -- #54D62C3D <br />
+  -- #FF48423D <br />
+  -- #919EAB3D <br />
 </ParamField>
 
 ### Response
 
-<ResponseField name="success" type="number">
-  Indicates whether the call was successful. 1 if successful, 0 if not.
+<ResponseField name="id" type="string">
+  new folder's id
 </ResponseField>
-
-<ResponseField name="user_group" type="object">
-
-The contents of the user group
-
-<Expandable title="Toggle object">
-
-<ResponseField name="team_id" type="number">
-  Indicates whether a new user group was created.
+<ResponseField name="onwer" type="string">
+  new folder owner's id
 </ResponseField>
-
-<ResponseField name="token" type="string">
-  This is the user group token (userGroupToken or USER_GROUP_TOKEN) that will be
-  used to identify which user group is viewing the dashboard. You should save
-  this on your end to use when rendering an embedded dashboard.
+<ResponseField name="folder_name" type="string">
+  new folder's name
 </ResponseField>
-
-<ResponseField name="name" type="string">
-  This is the name of the user group provided in the request body.
+<ResponseField name="folder_icon" type="string">
+  new folder's icon
 </ResponseField>
-
-<ResponseField name="provided_id" type="string">
-  This is the user_group_id provided in the request body.
+<ResponseField name="folder_color" type="string">
+  new folder icon's color
 </ResponseField>
-
-<ResponseField name="properties" type="JSON | Null">
-  This is the properties object if it was provided in the request body
+<ResponseField name="created_at" type="string">
+  new folder creating date
 </ResponseField>
-
-<ResponseField name="api_environment_tag" type="JSON or null">
-  This is the environment tag of the user group. Possible values are 'Customer'
-  and 'Testing'
+<ResponseField name="updated_at" type="string">
+  folder's update date
 </ResponseField>
-
-</Expandable>
-
+<ResponseField name="deleted_at" type="null or string">
+  null or folder's deletion date
 </ResponseField>
 
 <RequestExample>
 
-```bash Example Request
-curl --location --request PUT 'https://api.mintlify.com/api/user' \
---header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
---data-raw '{
-    "user_group_id": "example_1",
-    "name": "Example 1",
-    "mapping": {"40": "213", "134": "386"},
-    "properties": {"filterValue": "value"}
-}'
-```
+```js JavaScript Fetch
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("X-Token", "YOUR_TOKEN_HERE");
 
+var raw = JSON.stringify({
+  "folder_icon": "Meta"
+});
+
+var requestOptions = {
+  method: 'PATCH',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://apiv2.empr.cloud/api/v1/folders/b17ba7d5-80f9-4126-aea0-1ce432c4831f", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+```python Python (Requests)
+import requests
+import json
+
+url = "https://apiv2.empr.cloud/api/v1/folders/b17ba7d5-80f9-4126-aea0-1ce432c4831f"
+
+payload = json.dumps({
+  "folder_icon": "Moon"
+})
+headers = {
+  'Content-Type': 'application/json',
+  'X-Token': 'YOUR_TOKEN_HERE'
+}
+
+response = requests.request("PATCH", url, headers=headers, data=payload)
+
+print(response.text)
+```
 </RequestExample>
 
 <ResponseExample>
 
 ```json Response
 {
-  "success": 1,
-  "user_group": {
-    "team_id": 113,
-    "token": "<user_group_token_to_auth_dashboard>",
-    "name": "ok",
-    "provided_id": "6"
-  }
+  "data": {
+        "id": "a193e419-78de-49c0-b110-4d4d907c0536",
+        "owner": "96f684ee-331d-4074-9cc9-b732052d4ac9",
+        "folder_name": "test",
+        "folder_icon": "Discord",
+        "folder_color": "#3366FF3D",
+        "created_at": "2023-10-04T11:48:30.800877Z",
+        "updated_at": "2023-10-04T11:48:30.800877Z",
+        "deleted_at": null
+    }
 }
 ```
 
