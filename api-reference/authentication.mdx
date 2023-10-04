@@ -1,22 +1,91 @@
 ---
 title: "Authentication"
-description: "Example overview page before API endpoints"
+description: "Getting X-Token for work with Vision's API"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et eros iaculis tortor dapibus cursus. Curabitur quis sapien nec tortor dictum gravida.
+## Why do you need a token?
+The token is needed to authorise requests for your account. In other words, it serves as a kind of combination of login and password, with its help the server understands from which user the request comes and which user it is necessary to create a folder or a browser profile for.
 
-```bash
-'Authorization': 'Token <team_token>'
+## Getting a token using Postman
+In order to get the token, you just need to send a POST request to the following URL:
+
+``` 
+https://apiv2.empr.cloud/api/v1/users/auth
 ```
 
-## API Tokens
+with the body:
 
-Nullam convallis mauris at nunc consectetur, ac imperdiet leo rutrum. Maecenas cursus purus a pellentesque blandit. Pellentesque vitae lacinia libero, non mollis metus.
+``` json 
+{
+    "username": "your_username", // replace your_username with your email
+    "password": "your_password" // replace your_password with your password
+}
+```
 
-Nam id ullamcorper urna, at rutrum enim. [Maecenas vulputate](/introduction) vehicula libero, vitae sodales augue pretium nec. Quisque a magna tempor, semper risus vel, fermentum nunc. Pellentesque fermentum interdum ex, eu convallis massa blandit sed. Aliquam bibendum ipsum vel laoreet auctor.
 
-### Permissions
+After executing this query, you will receive a response of the form:
 
-Etiam lobortis ut odio ut fermentum. Nunc odio velit, sollicitudin at consectetur id, tristique eget turpis. Aliquam at risus vitae dolor sodales venenatis. In hac habitasse platea dictumst.
+``` json 
+{
+    "data": {
+        "user": {
+            "id": "dda3195f-b7bb-4afe-bf22-f6fddb2e12bf",
+            "username": "alt.vw-fo5augpa@yopmail.com",
+            "active": true,
+            "created_at": "2023-09-27T11:37:54.909869Z",
+            "updated_at": "2023-09-27T11:37:54.909869Z"
+        },
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGRhMzE5NWYtYjdiYi00YWZlLWJmMjItZjZmZGRiMmUxMmJmIiwidXNlcm5hbWUiOiJhbHQudnctZm81YXVncGFAeW9wbWFpbC5jb20iLCJleHAiOjE2OTkwMTU0NTh9.0en33uuY4NN8LKxK6LYlicl2qoLiWt_SOOHrnse9hXE"
+    }
+}
+```
+<Note>
+A token is a character set **between two double quotes** starting with **eyJ0...**
+</Note>
 
-Aenean consequat diam eget mollis fermentum. [Quisque eu malesuada](/introduction) felis, non dignissim libero.
+## Get token using Fetch API (JavaScript)
+As an example, let's specify the code to fetch a token using JavaScript code, using the Fetch API:
+
+```js
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "username": "your_username", // specify your email instead of your_username
+  "password": "your_password" // specify your password instead of your_password
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://apiv2.empr.cloud/api/v1/users/auth", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+
+## Getting a token with Requests (Python)
+Code to get a token using the requests library in Python
+
+``` python
+import requests
+import json
+
+url = "https://apiv2.empr.cloud/api/v1/users/auth"
+
+payload = json.dumps({
+  "username": "your_username", # specify your email instead of your_username
+  "password": "your_password" # specify your password instead of your_password
+})
+headers = {
+  'Content-Type': 'application/json'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
