@@ -12,15 +12,52 @@ description: "This endpoint deletes an existing user."
 
 ### Query parameters
 
-<ParamField body="Folder's id" required>
+<ParamField body="Folder's id" >
   your folder's id, you want to change something
 </ParamField>
+
+<RequestExample>
+```js JavaScript (Fetch)
+var myHeaders = new Headers();
+myHeaders.append("X-Token", "YOUR_TOKEN_HERE");
+
+var requestOptions = {
+  method: 'DELETE',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+
+```python Python (Requests)
+import requests
+
+url = "https://apiv2.empr.cloud/api/v1/folders/:folder_id"
+
+payload = {}
+headers = {
+  'X-Token': 'YOUR_TOKEN_HERE'
+}
+
+response = requests.request("DELETE", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
+</RequestExample>
 
 
 ### Response
 
-<ResponseField name="success" type="number">
-  Indicates whether the call was successful. 1 if successful, 0 if not.
+<ResponseField name="data" type="array">
+  folder's data
+</ResponseField>
+<ResponseField name="usage" type="object">
+  usage data
 </ResponseField>
 
 
