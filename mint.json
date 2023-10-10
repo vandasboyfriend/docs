@@ -1,7 +1,10 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Vision Documentation",
-  "versions": ["English", "Русский"],
+  "versions": [
+    "English",
+    "Русский"
+  ],
   "logo": {
     "dark": "/logo/dark_theme.svg",
     "light": "/logo/light_theme.svg"
@@ -66,99 +69,140 @@
     {
       "group": "Getting started",
       "version": "English",
-      "pages": ["getting-started/introduction", "getting-started/advantages", "getting-started/registration", "getting-started/installation"]
+      "pages": [
+        "getting-started/introduction",
+        "getting-started/advantages",
+        "getting-started/registration",
+        "getting-started/installation"
+      ]
     },
     {
       "group": "Начало работы",
       "version": "Русский",
-      "pages": ["getting-started/ru/introduction", "getting-started/ru/advantages", "getting-started/ru/registration", "getting-started/ru/installation"]
+      "pages": [
+        "getting-started/ru/introduction",
+        "getting-started/ru/advantages",
+        "getting-started/ru/registration",
+        "getting-started/ru/installation"
+      ]
     },
     {
       "group": "Work with Vision",
       "version": "English",
       "pages": [
-          {
-            "group": "Folders",
-            "icon": "folder",
-            "pages": ["manual/folders/overview"],
-            "version": "English"
-          },
-          {
-            "group": "Profiles",
-            "icon": "browser",
-            "pages": ["manual/profiles/overview"],
-            "version": "English"
-          },
-          {
-            "group": "Proxy",
-            "icon": "cloud",
-            "pages": ["manual/proxy/overview"],
-            "version": "English"
-          },
-          {
-            "group": "Extras",
-            "icon": "star",
-            "pages": ["manual/extras/overview"],
-            "version": "English"
-          },
-          {
-            "group": "Team work",
-            "icon": "people-group",
-            "pages": ["manual/teamwork/overview"],
-            "version": "English"
-          }
-        ]
-      },
         {
-          "group": "Работа с Vision",
-          "version": "Русский",
+          "group": "Folders",
+          "icon": "folder",
           "pages": [
-            {
-              "group": "Папки",
-              "icon": "folder",
-              "pages": ["manual/folders/ru/overview"],
-              "version": "Русский"
-            },
-            {
-              "group": "Профили",
-              "icon": "browser",
-              "pages": ["manual/profiles/ru/overview"],
-              "version": "Русский"
-            },
-            {
-              "group": "Прокси",
-              "icon": "cloud",
-              "pages": ["manual/proxy/ru/overview"],
-              "version": "Русский"
-            },
-            {
-              "group": "Экстра",
-              "icon": "star",
-              "pages": ["manual/extras/ru/overview"],
-              "version": "Русский"
-            },
-            {
-              "group": "Команды",
-              "icon": "people-group",
-              "pages": ["manual/teamwork/ru/overview"],
-              "version": "Русский"
-            }
+            "manual/folders/overview"
+          ],
+          "version": "English"
+        },
+        {
+          "group": "Profiles",
+          "icon": "browser",
+          "pages": [
+            "manual/profiles/overview"
+          ],
+          "version": "English"
+        },
+        {
+          "group": "Proxy",
+          "icon": "cloud",
+          "pages": [
+            "manual/proxy/overview"
+          ],
+          "version": "English"
+        },
+        {
+          "group": "Extras",
+          "icon": "star",
+          "pages": [
+            "manual/extras/overview"
+          ],
+          "version": "English"
+        },
+        {
+          "group": "Team work",
+          "icon": "people-group",
+          "pages": [
+            "manual/teamwork/overview"
+          ],
+          "version": "English"
+        }
+      ]
+    },
+    {
+      "group": "Работа с Vision",
+      "version": "Русский",
+      "pages": [
+        {
+          "group": "Папки",
+          "icon": "folder",
+          "pages": [
+            "manual/folders/ru/overview"
+          ],
+          "version": "Русский"
+        },
+        {
+          "group": "Профили",
+          "icon": "browser",
+          "pages": [
+            "manual/profiles/ru/overview"
+          ],
+          "version": "Русский"
+        },
+        {
+          "group": "Прокси",
+          "icon": "cloud",
+          "pages": [
+            "manual/proxy/ru/overview"
+          ],
+          "version": "Русский"
+        },
+        {
+          "group": "Экстра",
+          "icon": "star",
+          "pages": [
+            "manual/extras/ru/overview"
+          ],
+          "version": "Русский"
+        },
+        {
+          "group": "Команды",
+          "icon": "people-group",
+          "pages": [
+            "manual/teamwork/ru/overview"
+          ],
+          "version": "Русский"
+        }
       ]
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "pages": [
+        "api-reference/authentication"
+      ]
     },
     {
       "group": "Endpoints",
       "pages": [
         {
           "group": "Folders",
-          "pages": ["api-reference/folders/get", "api-reference/folders/create","api-reference/folders/update", "api-reference/folders/delete"]
+          "pages": [
+            "api-reference/folders/get",
+            "api-reference/folders/create",
+            "api-reference/folders/update",
+            "api-reference/folders/delete"
+          ]
         },
         {
           "group": "Profiles",
-          "pages": ["api-reference/profiles/create", "api-reference/profiles/edit","api-reference/profiles/delete"]
+          "pages": [
+            "api-reference/profiles/create",
+            "api-reference/profiles/edit",
+            "api-reference/profiles/delete"
+          ]
         }
       ]
     }
