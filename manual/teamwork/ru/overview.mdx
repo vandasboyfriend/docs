@@ -1,0 +1,38 @@
+---
+title: 'Общее про Команды'
+icon: 'list-dropdown'
+---
+
+## High performance
+
+In creating our product we have emphasised on performance and stability and now we have maximum speed for all operations in Vision. You will not need to wait about 1 minute to make your profile synced with cloud. All processes are very fast and stable.
+
+## Interface usability
+
+With extensive experience in commercial software development we understand how important it is to make a user-friendly interface that will fully reveal the benefits of our application. We have paid great attention to every button, every icon, every tab in our application so that you can intuitively understand where this or that function is located.
+
+## Real fingerprints
+
+Vision uses real user fingerprints. This means that the fingerprint settings you see when you create a profile are those of a real person. The advantage of this approach over artificial generation of fingerprints is that it is impossible to make a mistake. That is, there can be no situation when a failure occurs during the generation of a fingerprint and the parameters that are technically impossible are given out.
+
+## Flexible teamwork
+
+We have tried to make teamwork as convenient and flexible as possible. Each team member can be given only the permissions he/she needs, e.g. the permission to run profiles without the permission to deleting or transferring them. Moreover, you can give a user access to a specific folder or to all of them at once.
+In addition, a user can have multiple teams, and be either an owner or a member of them
+
+## Chromium-based
+
+Yes, Vision is Chromium-based anti-detect browser.
+This means that we can fully spoofing all parameters that can't be reached through JavaScript injection. In addition, it is obvious that we can customise Chromium for any tasks of our users
+
+## Data safety
+
+We've done a good job of securing user data and are fully confident that no one but you will have access to your profiles.
+
+1. When synchronising a profile, the service generates a link to S3 to download the file. It is only valid for a certain amount of time and technically can only receive the archive from you.
+When uploading, the system will check that the data has been transferred in full and matches the data prepared for archiving after the profile is closed. Accordingly, it will not be technically possible to upload broken data. The server will check that the data you were going to upload coincide with those that were uploaded in fact. The synchronisation process will be completed only if all conditions are met. If an error occurs, the system will prompt you to repeat the synchronisation process.
+
+2. To download the archive with profile data, a link is generated, which is valid only for a certain period of time and is available only to you. If there is a request to download from another IP address, the process will be stopped. Therefore, if your traffic is intercepted, it will be impossible to download the archive.
+And what if someone tries to steal information through the service that generates download links? We have provided for this option too! The service has access only for link generation, it has no access to other data stored in S3. Therefore, even if the key is leaked, there will be no possibility to steal the data, because it has no access to viewing files, and to generate a link you need to know the ID of the folder and profile.
+
+In addition, of course, all data in Vision is encrypted with a 256-bit AES key.
