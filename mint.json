@@ -65,7 +65,37 @@
   "navigation": [
     {
       "group": "Getting started",
-      "pages": ["getting-started/introduction", "getting-started/advantages", "getting-started/installation"]
+      "pages": ["getting-started/introduction", "getting-started/advantages", "getting-started/registration", "getting-started/installation"]
+    },
+    {
+      "group": "Work with Vision",
+      "pages": [
+        {
+          "group": "Folders",
+          "icon": "folder",
+          "pages": ["manual/folders/create"]
+        },
+        {
+          "group": "Profiles",
+          "icon": "browser",
+          "pages": ["manual/profiles/create"]
+        },
+        {
+          "group": "Proxy",
+          "icon": "cloud",
+          "pages": ["manual/proxy/overview"]
+        },
+        {
+          "group": "Extras",
+          "icon": "star",
+          "pages": ["manual/extras/overview"]
+        },
+        {
+          "group": "Team work",
+          "icon": "people-group",
+          "pages": ["manual/teamwork/overview"]
+        }
+      ]
     },
     {
       "group": "API Documentation",
