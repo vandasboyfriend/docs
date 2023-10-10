@@ -114,31 +114,31 @@
             {
               "group": "Папки",
               "icon": "folder",
-              "pages": ["manual/folders/overview"],
+              "pages": ["manual/folders/ru/overview"],
               "version": "Русский"
             },
             {
               "group": "Профили",
               "icon": "browser",
-              "pages": ["manual/profiles/overview"],
+              "pages": ["manual/profiles/ru/overview"],
               "version": "Русский"
             },
             {
               "group": "Прокси",
               "icon": "cloud",
-              "pages": ["manual/proxy/overview"],
+              "pages": ["manual/proxy/ru/overview"],
               "version": "Русский"
             },
             {
               "group": "Экстра",
               "icon": "star",
-              "pages": ["manual/extras/overview"],
+              "pages": ["manual/extras/ru/overview"],
               "version": "Русский"
             },
             {
               "group": "Команды",
               "icon": "people-group",
-              "pages": ["manual/teamwork/overview"],
+              "pages": ["manual/teamwork/ru/overview"],
               "version": "Русский"
             }
       ]
