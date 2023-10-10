@@ -77,36 +77,38 @@
       "group": "Work with Vision",
       "version": "English",
       "pages": [
-        {
-          "group": "Folders",
-          "icon": "folder",
-          "pages": ["manual/folders/overview"],
-          "version": "English"
-        },
-        {
-          "group": "Profiles",
-          "icon": "browser",
-          "pages": ["manual/profiles/overview"],
-          "version": "English"
-        },
-        {
-          "group": "Proxy",
-          "icon": "cloud",
-          "pages": ["manual/proxy/overview"],
-          "version": "English"
-        },
-        {
-          "group": "Extras",
-          "icon": "star",
-          "pages": ["manual/extras/overview"],
-          "version": "English"
-        },
-        {
-          "group": "Team work",
-          "icon": "people-group",
-          "pages": ["manual/teamwork/overview"],
-          "version": "English"
-        }]},
+          {
+            "group": "Folders",
+            "icon": "folder",
+            "pages": ["manual/folders/overview"],
+            "version": "English"
+          },
+          {
+            "group": "Profiles",
+            "icon": "browser",
+            "pages": ["manual/profiles/overview"],
+            "version": "English"
+          },
+          {
+            "group": "Proxy",
+            "icon": "cloud",
+            "pages": ["manual/proxy/overview"],
+            "version": "English"
+          },
+          {
+            "group": "Extras",
+            "icon": "star",
+            "pages": ["manual/extras/overview"],
+            "version": "English"
+          },
+          {
+            "group": "Team work",
+            "icon": "people-group",
+            "pages": ["manual/teamwork/overview"],
+            "version": "English"
+          }
+        ]
+      },
         {
           "group": "Работа с Vision",
           "version": "Русский",
