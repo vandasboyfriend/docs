@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Vision Documentation",
   "versions": [
-    "English",
-    "Русский"
+    "Русский",
+    "English"
   ],
   "logo": {
     "dark": "/logo/dark_theme.svg",
