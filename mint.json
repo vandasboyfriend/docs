@@ -67,16 +67,6 @@
   ],
   "navigation": [
     {
-      "group": "Getting started",
-      "version": "English",
-      "pages": [
-        "getting-started/introduction",
-        "getting-started/advantages",
-        "getting-started/registration",
-        "getting-started/installation"
-      ]
-    },
-    {
       "group": "Начало работы",
       "version": "Русский",
       "pages": [
@@ -84,6 +74,16 @@
         "getting-started/ru/advantages",
         "getting-started/ru/registration",
         "getting-started/ru/installation"
+      ]
+    },
+    {
+      "group": "Getting started",
+      "version": "English",
+      "pages": [
+        "getting-started/introduction",
+        "getting-started/advantages",
+        "getting-started/registration",
+        "getting-started/installation"
       ]
     },
     {
