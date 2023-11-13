@@ -3,36 +3,36 @@ title: 'Преимущества Vision'
 icon: 'sparkles'
 ---
 
-## High performance
+## Высокая производительность
 
-In creating our product we have emphasised on performance and stability and now we have maximum speed for all operations in Vision. You will not need to wait about 1 minute to make your profile synced with cloud. All processes are very fast and stable. 
+При создании нашего продукта мы уделяли особое внимание производительности и стабильности, и теперь все операции в Vision выполняются с максимальной скоростью. Вам не придется ждать около 1 минуты, чтобы синхронизировать свой профиль с облаком. Все процессы происходят очень быстро и стабильно.
 
-## Interface usability
+## Удобный интерфейс
 
-With extensive experience in commercial software development we understand how important it is to make a user-friendly interface that will fully reveal the benefits of our application. We have paid great attention to every button, every icon, every tab in our application so that you can intuitively understand where this or that function is located.
+Имея большой опыт разработки коммерческого программного обеспечения, мы понимаем, насколько важно сделать удобный интерфейс, который в полной мере раскроет все преимущества нашего приложения. Мы уделили большое внимание каждой кнопке, каждой иконке, каждой вкладке в нашем приложении, чтобы вы могли интуитивно понять, где находится та или иная функция.
 
-## Real fingerprints
+## Настоящие отпечатки
 
-Vision uses real user fingerprints. This means that the fingerprint settings you see when you create a profile are those of a real person. The advantage of this approach over artificial generation of fingerprints is that it is impossible to make a mistake. That is, there can be no situation when a failure occurs during the generation of a fingerprint and the parameters that are technically impossible are given out.
+Vision использует отпечатки реальных пользователей. Это означает, что параметры отпечатков, которые вы видите при создании профиля, соответствуют параметрам реального ПК в интернете. Преимущество такого подхода перед искусственной генерацией отпечатков пальцев заключается в том, что невозможно допустить ошибку. То есть не может быть ситуации, когда при генерации отпечатка происходит сбой и выдаются параметры, которые технически невозможны.
 
-## Flexible teamwork
+## Гибкий командный режим 
 
-We have tried to make teamwork as convenient and flexible as possible. Each team member can be given only the permissions he/she needs, e.g. the permission to run profiles without the permission to deleting or transferring them. Moreover, you can give a user access to a specific folder or to all of them at once. 
-In addition, a user can have multiple teams, and be either an owner or a member of them
+Мы постарались сделать работу в команде максимально удобной и гибкой. Каждому члену команды можно предоставить только те права, которые ему необходимы, например, право запуска профилей без права их удаления или переноса. Кроме того, можно предоставить пользователю доступ к определенной папке или ко всем папкам сразу. 
+Кроме того, пользователь может иметь несколько команд и быть как их владельцем, так и просто участником
 
 ## Chromium-based
 
-Yes, Vision is Chromium-based anti-detect browser.
-This means that we can fully spoofing all parameters that can't be reached through JavaScript injection. In addition, it is obvious that we can customise Chromium for any tasks of our users 
+Да, **Vision** является Chromium-based антидетект браузером.
+Это означает, что мы можем полностью подменить все параметры, которые не могут быть достигнуты с помощью инъекции JavaScript. Кроме того, очевидно, что мы можем настроить Chromium под любые задачи наших пользователей
 
-## Data safety 
+## Безопасность ваших данных
 
-We've done a good job of securing user data and are fully confident that no one but you will have access to your profiles.
+Мы проделали большую работу по защите данных пользователей и полностью уверены, что никто, кроме вас, не получит доступа к вашим профилям.
 
-1. When synchronising a profile, the service generates a link to S3 to download the file. It is only valid for a certain amount of time and technically can only receive the archive from you. 
-When uploading, the system will check that the data has been transferred in full and matches the data prepared for archiving after the profile is closed. Accordingly, it will not be technically possible to upload broken data. The server will check that the data you were going to upload coincide with those that were uploaded in fact. The synchronisation process will be completed only if all conditions are met. If an error occurs, the system will prompt you to repeat the synchronisation process.
+1. При синхронизации профиля, сервис генерирует ссылку на S3 для загрузки файла. Она валидна только определённое количество времени и технически может получить архив только от вас. 
+При загрузке система проверит, что данные были переданы в полном объёме и совпадают с теми, что были приготовлены для архивации, после закрытия профиля. Соответственно, загрузить битые данные не получится технически. Сервер проверит, что данные, которые вы собирались загрузить совпадают с теми, которые были загружены по факту. Процесс синхронизации будет завершён, только если все условия будут соблюдены. В случае возникновения ошибки, система предложит повторить процесс синхронизации.
 
-2. To download the archive with profile data, a link is generated, which is valid only for a certain period of time and is available only to you. If there is a request to download from another IP address, the process will be stopped. Therefore, if your traffic is intercepted, it will be impossible to download the archive.
-And what if someone tries to steal information through the service that generates download links? We have provided for this option too! The service has access only for link generation, it has no access to other data stored in S3. Therefore, even if the key is leaked, there will be no possibility to steal the data, because it has no access to viewing files, and to generate a link you need to know the ID of the folder and profile.
+2. Для скачивания архива с данными профиля, генерируется ссылка, которая валидна только определённое время и доступна только вам. Если поступит запрос на скачивание с другого IP-адреса, процесс будет остановлен. Поэтому, если вдруг ваш трафик перехватят, скачать архив будет невозможно.
+А что если кто-то попытается украсть информацию через сервис, который генерирует ссылки на скачивание? Разработчики предусмотрели и этот вариант! У сервиса имеется доступ только для генерации ссылки, доступа к другим данным, которые хранятся в S3 у него нет. Поэтому даже если утечёт ключ, возможности украсть данные не будет, так как доступа к просмотру файлов у него нет, а для формирования ссылки нужно знать ID папки и профиля.
 
-In addition, of course, all data in Vision is encrypted with a 256-bit AES key.
+Помимо этого, разумеется, все данные в Vision шифруются при помощи 256-битного ключа AES. 
