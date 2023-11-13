@@ -140,7 +140,8 @@
           "group": "Папки",
           "icon": "folder",
           "pages": [
-            "manual/folders/ru/overview"
+            "manual/folders/ru/overview",
+            "manual/folders/ru/create"
           ],
           "version": "Русский"
         },
