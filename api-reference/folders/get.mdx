@@ -1,48 +1,48 @@
 ---
-title: "Get folders list"
+title: "Получение списка папок"
 api: "GET https://apiv2.empr.cloud/api/v1/folders/"
-description: "This endpoint gets all your folders list"
+description: "Описание метода получения списка созданных папок"
 ---
 
-### Headers
+### Заголовки
 
 <ParamField body="X-Token" type="string" required>
-  Here you need to put your X-Token
+  Токен авторизации
 </ParamField>
 
 
-### Response
+### Ответ
 
 <ResponseField name="id" type="string" >
-  folder's id
+  ID папки
 </ResponseField>
 
 <ResponseField name="owner" type="string" >
-  folder owner's id
+  ID владельца папки
 </ResponseField>
 
 <ResponseField name="folder_name" type="string" >
-  folder's name
+  Название папки
 </ResponseField>
 
 <ResponseField name="folder_icon" type="string">
-  folder icon's name
+  Иконка папки
 </ResponseField>
 
 <ResponseField name="folder_color" type="string">
-  folder icon's color
+  Цвет папки
 </ResponseField>
 
 <ResponseField name="created_at" type="string">
-  folder's created date
+  Дата создания папки
 </ResponseField>
 
 <ResponseField name="updated_at" type="string">
-  folder's last updated date
+  Дата последнего изменения папки
 </ResponseField>
 
 <ResponseField name="deleted_ad" type="string or null">
-  folder's deleted date
+  Дата удаления папки или null
 </ResponseField>
 
 <RequestExample >
