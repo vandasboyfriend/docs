@@ -1,24 +1,24 @@
 ---
-title: "Create folder"
+title: "Создание папки"
 api: "POST https://apiv2.empr.cloud/api/v1/folders/"
-description: "This endpoint creates a new folder"
+description: "Описание метода создания папки"
 ---
 
-### Headers
+### Заголовки
 
 <ParamField body="X-Token" type="string">
-  your auth token
+  Токен авторизации
 </ParamField>
 
 
-### Body
+### Тело запроса
 
 <ParamField body="folder_name" type="string" required>
-  new folder's name, any string
+  Имя новой папки
 </ParamField>
 <ParamField body="folder_icon" type="string" required>
-  new folder's icon
-  list of available icons: <br />
+  Иконка новой папки
+  Список доступных иконок: <br />
     -- Cloud <br />
     -- Google <br />
     -- Facebook <br />
@@ -37,8 +37,8 @@ description: "This endpoint creates a new folder"
   
 </ParamField>
 <ParamField body="folder_color" type="string" required>
-  new folder icon's color <br />
-  list of available colors: <br />
+  Цвет новой папки <br />
+  Список доступных цветов: <br />
   -- #FFC1073D <br />
   -- #C8E4FFCD <br />
   -- #3366FF3D <br />
@@ -47,31 +47,31 @@ description: "This endpoint creates a new folder"
   -- #919EAB3D <br />
 </ParamField>
 
-## Response
+## Ответ
 
 <ResponseField name="id" type="string">
-  new folder's id
+  ID созданной папки
 </ResponseField>
 <ResponseField name="onwer" type="string">
-  new folder owner's id
+  ID владельца созданной папки
 </ResponseField>
 <ResponseField name="folder_name" type="string">
-  new folder's name
+  Название новой папки
 </ResponseField>
 <ResponseField name="folder_icon" type="string">
-  new folder's icon
+  Иконка новой
 </ResponseField>
 <ResponseField name="folder_color" type="string">
-  new folder icon's color
+  Цвет новой папки
 </ResponseField>
 <ResponseField name="created_at" type="string">
-  new folder creating date
+  Дата создания папки
 </ResponseField>
 <ResponseField name="updated_at" type="string">
-  folder's update date
+  Дата последнего изменения папки
 </ResponseField>
 <ResponseField name="deleted_at" type="null or string">
-  null or folder's deletion date
+  Дата удаления папки или null
 </ResponseField>
 
 <RequestExample>
