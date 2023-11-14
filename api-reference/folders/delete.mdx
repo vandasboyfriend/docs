@@ -1,19 +1,19 @@
 ---
-title: "Delete folder"
+title: "Удаление папки"
 api: "DELETE https://apiv2.empr.cloud/api/v1/folders/:folder_id"
-description: "This endpoint deletes an existing folder"
+description: "Описание метода удаления папки"
 ---
 
-### Headers
+### Заголовки
 
 <ParamField body="X-Token" type="string" required>
-  your auth token
+  Токен авторизации
 </ParamField>
 
-### Query parameters
+### Параметры запроса
 
-<ParamField body="Folder's id" >
-  your folder's id, you want to change something
+<ParamField body="folder_id" >
+  ID удаляемой папки
 </ParamField>
 
 <RequestExample>
@@ -27,7 +27,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("", requestOptions)
+fetch("https://apiv2.empr.cloud/api/v1/folders/:folder_id", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -51,13 +51,13 @@ print(response.text)
 </RequestExample>
 
 
-### Response
+### Ответ
 
 <ResponseField name="data" type="array">
-  folder's data
+  Данные папки
 </ResponseField>
 <ResponseField name="usage" type="object">
-  usage data
+  Количество профилей в папке
 </ResponseField>
 
 
