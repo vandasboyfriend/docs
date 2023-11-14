@@ -192,7 +192,7 @@
           ]
         },
         {
-          "group": "Profiles",
+          "group": "Профили",
           "pages": [
             "api-reference/profiles/create",
             "api-reference/profiles/edit",
