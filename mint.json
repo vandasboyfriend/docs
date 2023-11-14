@@ -149,7 +149,7 @@
           "group": "Профили",
           "icon": "browser",
           "pages": [
-            "manual/profiles/ru/overview"
+            "manual/profiles/ru/overview", "manual/profiles/ru/masscreation"
           ],
           "version": "Русский"
         },
