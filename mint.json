@@ -149,7 +149,8 @@
           "group": "Профили",
           "icon": "browser",
           "pages": [
-            "manual/profiles/ru/overview", "manual/profiles/ru/masscreation"
+            "manual/profiles/ru/overview",
+            "manual/profiles/ru/masscreation"
           ],
           "version": "Русский"
         },
@@ -203,7 +204,7 @@
     }
   ],
   "feedback": {
-    "thumbsRating": true
+    "thumbsRating": false
   },
   "api": {
     "playground": {
