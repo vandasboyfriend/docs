@@ -183,7 +183,7 @@
       "group": "Endpoints",
       "pages": [
         {
-          "group": "Folders",
+          "group": "Папки",
           "pages": [
             "api-reference/folders/get",
             "api-reference/folders/create",
