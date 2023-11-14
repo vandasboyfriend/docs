@@ -1,29 +1,29 @@
 ---
-title: "Edit folder"
+title: "Редактирование папки"
 api: "PATCH https://apiv2.empr.cloud/api/v1/folders/:folder_id"
-description: "This endpoint updates an existing folder"
+description: "Описание метода для редактирования существующей папки"
 ---
 
-### Headers
+### Заголовки
 
 <ParamField body="X-Token" type="string" required>
-  your auth token
+  Токен авторизации
 </ParamField>
 
-### Query parameters
-<ParamField body="Folder's id" required>
-  your folder's id, you want to change something
+### Параметры запроса
+<ParamField body="folder_id" required>
+  ID редактируемой папки
 </ParamField>
 
 
-### Body
+### Тело запроса
 
 <ParamField body="folder_name" type="string">
-  new folder's name, any string
+  Новое название папки
 </ParamField>
 <ParamField body="folder_icon" type="string">
-  new folder's icon
-  list of available icons: <br />
+  Новая иконка папки
+  Список доступных значений: <br />
     -- Cloud <br />
     -- Google <br />
     -- Facebook <br />
@@ -42,8 +42,8 @@ description: "This endpoint updates an existing folder"
   
 </ParamField>
 <ParamField body="folder_color" type="string">
-  new folder icon's color <br />
-  list of available colors: <br />
+  Цвет иконки <br />
+  Список доступных цветов: <br />
   -- #FFC1073D <br />
   -- #C8E4FFCD <br />
   -- #3366FF3D <br />
@@ -52,31 +52,31 @@ description: "This endpoint updates an existing folder"
   -- #919EAB3D <br />
 </ParamField>
 
-### Response
+### Ответ
 
 <ResponseField name="id" type="string">
-  new folder's id
+  ID папки
 </ResponseField>
 <ResponseField name="onwer" type="string">
-  new folder owner's id
+  ID владельца папки
 </ResponseField>
 <ResponseField name="folder_name" type="string">
-  new folder's name
+  Название папки
 </ResponseField>
 <ResponseField name="folder_icon" type="string">
-  new folder's icon
+  Иконка папки
 </ResponseField>
 <ResponseField name="folder_color" type="string">
-  new folder icon's color
+  Цвет папки
 </ResponseField>
 <ResponseField name="created_at" type="string">
-  new folder creating date
+  Дата создания папки
 </ResponseField>
 <ResponseField name="updated_at" type="string">
-  folder's update date
+  Дата последнего изменения папки
 </ResponseField>
 <ResponseField name="deleted_at" type="null or string">
-  null or folder's deletion date
+  Дата удаления или null
 </ResponseField>
 
 <RequestExample>
@@ -97,7 +97,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://apiv2.empr.cloud/api/v1/folders/b17ba7d5-80f9-4126-aea0-1ce432c4831f", requestOptions)
+fetch("https://apiv2.empr.cloud/api/v1/folders/:folder_id", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -106,7 +106,7 @@ fetch("https://apiv2.empr.cloud/api/v1/folders/b17ba7d5-80f9-4126-aea0-1ce432c48
 import requests
 import json
 
-url = "https://apiv2.empr.cloud/api/v1/folders/b17ba7d5-80f9-4126-aea0-1ce432c4831f"
+url = "https://apiv2.empr.cloud/api/v1/folders/:folder_id"
 
 payload = json.dumps({
   "folder_icon": "Moon"
